@@ -40,9 +40,21 @@ O circuito foi desenvolvido no simulador **Falstad** para testar dinamicamente o
 
 **Imagens do circuito**:
 
-**Esquema do PCB (Eagle)**:
+**I) Falstad:**
 
-> **Observação:** inserir foto da medição do transformador nesta seção.
+![Circuito carregador 12V Falstad](Imagens/Circuito%20falstad.png)
+
+**II) Circuito físico implementado:**
+
+
+**III) Esquema do PCB (Eagle)**:
+
+![Circuito carregador 12V Falstad](Imagens/Esquemático%20PCB%20(Eagle).png)
+
+![Circuito carregador 12V Falstad](Imagens/PCB%20Eagle.png)
+
+![Circuito carregador 12V Falstad](Imagens/PCB%20Eagle%20(detalhado).png)
+
 
 **Links úteis**:
 
