@@ -46,7 +46,7 @@ O circuito foi desenvolvido no simulador **Falstad** para testar dinamicamente o
 
 **Links úteis**:
 
-* Simulação interativa no Falstad: [https://tinyurl.com/2czyup7z](https://tinyurl.com/2czyup7z)
+* Simulação interativa no Falstad: [https://tinyurl.com/27o6eqhh](https://tinyurl.com/27o6eqhh)
 * Vídeo de execução do circuito: [https://youtu.be/P82pu6Qgv4M](https://youtu.be/P82pu6Qgv4M)
 
 ---
