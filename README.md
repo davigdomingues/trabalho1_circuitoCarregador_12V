@@ -1,5 +1,8 @@
 # Projeto de Carregador de Celular (3 a 12 V)
 
+> **Trabalho 1 - Projeto de Circuito Carregador de Celular de Tensão Ajustável**<br>
+> **Disciplina**: SSC0180 - Eletrônica para Computação
+
 ## Integrantes do Grupo
 
 * **Davi Gabriel Domingues** – Nº USP: 15447497
@@ -19,7 +22,7 @@
 4. [Explicação Técnica (Geral)](#explicação-técnica-geral)
    - [Fonte de Corrente Alternada (CA) e Transformador](#fonte-de-corrente-alternada-ca-e-transformador)
    - [Ponte Retificadora de Diodos](#ponte-retificadora-de-diodos-retificador-de-onda-completa)
-   - [Capacitor Eletrolítico de Filtro](#capacitor-eletrolítico-de-filtro-≥-470-µf)
+   - [Capacitor Eletrolítico de Filtro](#capacitor-eletrolítico-de-filtro-≥-348.77-µf)
    - [Resistor de Carga](#resistor-de-carga)
    - [Transistor NPN (BJT)](#transistor-npn-bjt)
    - [Potenciômetro](#potenciômetro)
@@ -56,7 +59,7 @@ O circuito foi desenvolvido no simulador **Falstad** para testar dinamicamente o
 
 1. Transformador rebaixador (127 V CA → 3–12 V CC) e isolamento galvânico
 2. Ponte retificadora de onda completa (4 × 1N4007)
-3. Capacitor de filtro (≥ 470 µF) para redução de ripple
+3. Capacitor de filtro (≥ 348.77 µF) para redução de ripple
 4. Transistor NPN (BC547 ou 2N2222) para regulação de saída
 5. Potenciômetro (10 kΩ) para ajuste de tensão de saída
 6. Diodo Zener (12 V / 1 W) para limitação da tensão máxima
@@ -131,9 +134,9 @@ O circuito foi desenvolvido no simulador **Falstad** para testar dinamicamente o
 
    A ponte retificadora é composta por quatro diodos de silício (ex.: 1N4007) dispostos em configuração clássica de onda completa. Essa topologia converte a corrente alternada do transformador em tensão contínua pulsante, mantendo a polaridade constante nos terminais de saída. Ambas as partes do ciclo da CA são aproveitadas, aumentando a eficiência e a continuidade do fluxo de carga. A tensão de saída ainda possui ondulações (ripple), que são suavizadas por um capacitor.
 
-2. **Capacitor Eletrolítico de Filtro (≥ 470 µF)**
+2. **Capacitor Eletrolítico de Filtro (≥ 348.77 µF)**
 
-   Responsável pela filtragem da tensão pulsante gerada pela ponte de diodos, o capacitor atua como um banco de carga: armazena energia durante os picos de tensão e a libera nos vales, suavizando as oscilações. O valor mínimo, para esse projeto, que pode ser adotado é de 470 µF, o suficiente para manter o ripple abaixo de 10%, com base na expressão:
+   Responsável pela filtragem da tensão pulsante gerada pela ponte de diodos, o capacitor atua como um banco de carga: armazena energia durante os picos de tensão e a libera nos vales, suavizando as oscilações. O valor mínimo, para esse projeto, que pode ser adotado é de 348.77 µF, o suficiente para manter o ripple por volta de 10%, com base na expressão:
 
    ```
    C >= I_carga / (2 * f * V_ripple)
@@ -177,7 +180,7 @@ O circuito foi desenvolvido no simulador **Falstad** para testar dinamicamente o
 | --------------------------------- | ---------------------------------------------------- |
 | Transformador rebaixador          | Reduz 127 V CA para, aproximadamente, 3–12 V CC e isola galvanicamente |
 | Ponte retificadora (1N4007 × 4)   | Converte CA em CC pulsante (onda completa)           |
-| Capacitor eletrolítico (≥ 470 µF) | Suaviza ondulações, mantendo ripple abaixo de 10%    |
+| Capacitor eletrolítico (≥ 348.77 µF) | Suaviza ondulações, mantendo ripple abaixo de 10%    |
 | Transistor NPN (BC547 / 2N2222)   | Regula corrente e tensão de saída                    |
 | Potenciômetro (10 kΩ)             | Ajusta polarização da base do transistor             |
 | Diodo Zener (12 V / 1 W)          | Limita tensão máxima a 12 V                          |
