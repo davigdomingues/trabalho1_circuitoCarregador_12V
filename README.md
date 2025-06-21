@@ -42,18 +42,29 @@ O circuito foi desenvolvido no simulador **Falstad** para testar dinamicamente o
 
 **I) Falstad:**
 
-![Circuito carregador 12V Falstad](Imagens/Circuito%20falstad.png)
+![Circuito carregador 12V Falstad](Imagens/Carregador/Circuito%20falstad.png)
 
 **II) Circuito físico implementado:**
 
+![Circuito carregador 12V Modelo físico implementado (imagem 1)](Imagens/Carregador/Circuito%20físico/Imagem1.jpg)
+
+![Circuito carregador 12V Modelo físico implementado (imagem 2)](Imagens/Carregador/Circuito%20físico/Imagem2.jpg)
+
+![Circuito carregador 12V Modelo físico implementado (imagem 3)](Imagens/Carregador/Circuito%20físico/Imagem3.jpg)
+
+![Circuito carregador 12V Modelo físico implementado (imagem 4)](Imagens/Carregador/Circuito%20físico/Imagem4.jpg)
+
+![Circuito carregador 12V Modelo físico implementado (imagem 5)](Imagens/Carregador/Circuito%20físico/Imagem5.jpg)
+
+![Circuito carregador 12V Modelo físico implementado (imagem 6)](Imagens/Carregador/Circuito%20físico/Imagem6.jpg)
 
 **III) Esquema do PCB (Eagle)**:
 
-![Circuito carregador 12V Falstad](Imagens/Esquemático%20PCB%20(Eagle).png)
+![Circuito carregador 12V Falstad](Imagens/Eagle/Esquemático%20PCB%20(Eagle).png)
 
-![Circuito carregador 12V Falstad](Imagens/PCB%20Eagle.png)
+![Circuito carregador 12V Falstad](Imagens/Eagle/PCB%20Eagle.png)
 
-![Circuito carregador 12V Falstad](Imagens/PCB%20Eagle%20(detalhado).png)
+![Circuito carregador 12V Falstad](Imagens/Eagle/PCB%20Eagle%20(detalhado).png)
 
 
 **Links úteis**:
