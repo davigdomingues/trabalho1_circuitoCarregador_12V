@@ -85,11 +85,11 @@ O circuito foi desenvolvido no simulador **Falstad** para testar dinamicamente o
 
 **III) Esquema do PCB (Eagle)**:
 
-![Circuito carregador 12V Falstad](Imagens/Eagle/Esquemático%20PCB%20(Eagle).png)
+![Esquemático do circuito carregador, feito na plataforma Eagle](Imagens/Eagle/Esquemático%20PCB%20(Eagle).png)
 
-![Circuito carregador 12V Falstad](Imagens/Eagle/PCB%20Eagle.png)
+![Esquemático do PCB do circuito carregador, feito na plataforma Eagle](Imagens/Eagle/PCB%20Eagle.png)
 
-![Circuito carregador 12V Falstad](Imagens/Eagle/PCB%20Eagle%20(detalhado).png)
+![Esquemático das conexões do PCB do circuito carregador, feito na plataforma Eagle](Imagens/Eagle/PCB%20Eagle%20(detalhado).png)
 
 
 **Links úteis**:
@@ -98,6 +98,10 @@ O circuito foi desenvolvido no simulador **Falstad** para testar dinamicamente o
 * Vídeo de execução do circuito: [https://youtu.be/P82pu6Qgv4M](https://youtu.be/P82pu6Qgv4M)
 
 ---
+
+## Cálculo de valores pertinentes
+
+![Cálculos Trabalho 1](./calculos_trabalho1.png)
 
 ## Explicação Técnica (Geral)
 
