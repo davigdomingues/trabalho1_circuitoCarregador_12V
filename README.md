@@ -8,9 +8,34 @@
 
 ---
 
+## Índice
+
+1. [Integrantes do Grupo](#integrantes-do-grupo)
+2. [Objetivos do Projeto](#objetivos-do-projeto)
+3. [Descrição Geral do Circuito](#descrição-geral-do-circuito)
+   - [Topologia do circuito](#topologia-do-circuito)
+   - [Imagens do circuito](#imagens-do-circuito)
+   - [Links úteis](#links-úteis)
+4. [Explicação Técnica (Geral)](#explicação-técnica-geral)
+   - [Fonte de Corrente Alternada (CA) e Transformador](#fonte-de-corrente-alternada-ca-e-transformador)
+   - [Ponte Retificadora de Diodos](#ponte-retificadora-de-diodos-retificador-de-onda-completa)
+   - [Capacitor Eletrolítico de Filtro](#capacitor-eletrolítico-de-filtro-≥-470-µf)
+   - [Resistor de Carga](#resistor-de-carga)
+   - [Transistor NPN (BJT)](#transistor-npn-bjt)
+   - [Potenciômetro](#potenciômetro)
+   - [LED (Diodo Emissor de Luz)](#led-diodo-emissor-de-luz)
+   - [Diodo Zener (Regulador de Tensão)](#diodo-zener-regulador-de-tensão)
+   - [Terra (GND)](#terra-gnd)
+   - [Escolhas de Projeto](#escolhas-de-projeto)
+5. [Componentes e Funções (explicação resumida)](#componentes-e-funções-explicação-resumida)
+6. [Funcionamento Resumido](#funcionamento-resumido)
+7. [Lista de Materiais e Custos](#lista-de-materiais-e-custos)
+
+---
+
 ## Objetivos do Projeto
 
-Este trabalho tem como objetivo projetar, descrever e simular uma fonte retificadora ajustável que converta corrente alternada (CA) de 127 V (valor eficaz) e frequência de 60 Hz em corrente contínua (CC), com saída regulável na faixa de **3 a 12 V**. A fonte deve ser adequada para aplicações práticas, como o carregamento de celulares e pequenos dispositivos eletrônicos.
+Este trabalho tem como objetivo projetar, descrever e simular uma fonte retificadora ajustável que converta corrente alternada (CA) de 127 V (valor eficaz) e frequência de 60 Hz em corrente contínua (CC), com saída regulável na faixa de **3 a 12 V**, aproximadamente. A fonte deve ser adequada para aplicações práticas, como o carregamento de celulares e pequenos dispositivos eletrônicos.
 
 Além da simulação funcional do circuito, o projeto visa aplicar conhecimentos de eletrônica analógica, tais como:
 
@@ -25,7 +50,7 @@ Além da simulação funcional do circuito, o projeto visa aplicar conhecimentos
 
 ## Descrição Geral do Circuito
 
-O circuito foi desenvolvido no simulador **Falstad** para testar dinamicamente os componentes e verificar a resposta em tempo real.
+O circuito foi desenvolvido no simulador **Falstad** para testar dinamicamente os componentes e verificar a resposta em tempo real, sendo, em seguida, montado, devidamente, o seu modelo físico associado.
 
 **Topologia do circuito**:
 
@@ -34,7 +59,7 @@ O circuito foi desenvolvido no simulador **Falstad** para testar dinamicamente o
 3. Capacitor de filtro (≥ 470 µF) para redução de ripple
 4. Transistor NPN (BC547 ou 2N2222) para regulação de saída
 5. Potenciômetro (10 kΩ) para ajuste de tensão de saída
-6. Diodo Zener (12 V / 1 W) para limitação de tensão máxima
+6. Diodo Zener (12 V / 1 W) para limitação da tensão máxima
 7. LED indicador de operação
 8. Resistor de carga para proteção e descarga do capacitor
 
@@ -84,15 +109,15 @@ O circuito foi desenvolvido no simulador **Falstad** para testar dinamicamente o
    V_pico = V_rms * sqrt(2)
    ```
 
-   Essa fonte está conectada a um transformador rebaixador, que tem a função de reduzir a tensão para valores apropriados ao carregamento (entre 3V e 12V, ajustáveis). O transformador também realiza o isolamento galvânico entre a rede elétrica e o circuito de carga, garantindo maior segurança. A relação de espiras (N₁\:N₂) determina o valor da tensão de saída no enrolamento secundário, de acordo com:
+   Essa fonte está conectada a um transformador rebaixador, que tem a função de reduzir a tensão para valores apropriados ao carregamento (entre, aproximadamente, 3V e 12V, ajustáveis). O transformador também realiza o isolamento galvânico entre a rede elétrica e o circuito de carga, garantindo maior segurança. A relação de espiras (N₁\:N₂) determina o valor da tensão de saída no enrolamento secundário, de acordo com:
 
    ```
    N1/N2 = V1/V2
    ```
 
    Nesse caso, o ‘secundário’ representa a saída, enquanto ‘primário’ representa a entrada. Tem-se a imagem a seguir das especificações dos transformadores presentes para o circuito:
-
-   Para este projeto, foi utilizado o transformador número 1.
+   
+   Para este projeto, foi utilizado o transformador número 1. No Falstad, foi utilizada a seguinte configuração para o transformador:
 
 2. **Ponte Retificadora de Diodos (Retificador de Onda Completa)**
 
@@ -108,7 +133,7 @@ O circuito foi desenvolvido no simulador **Falstad** para testar dinamicamente o
 
 4. **Resistor de Carga**
 
-   O resistor limita a corrente de saída e dissipa energia em forma de calor, protegendo os componentes sensíveis como o LED e o transistor contra sobrecorrentes. Além disso, auxilia no controle da velocidade de descarga do capacitor, estabilizando a resposta do circuito frente a variações rápidas de carga.
+   O resistor limita a corrente de saída e dissipa energia em forma de calor, protegendo os componentes sensíveis, como o LED e o transistor, contra sobrecorrentes. Além disso, auxilia no controle da velocidade de descarga do capacitor, estabilizando a resposta do circuito frente a variações rápidas de carga.
 
 5. **Transistor NPN (BJT)**
 
@@ -116,7 +141,7 @@ O circuito foi desenvolvido no simulador **Falstad** para testar dinamicamente o
 
 6. **Potenciômetro**
 
-   Um resistor variável, de valor típico 10 kΩ, que permite ajustar a tensão de saída do carregador. Atua diretamente sobre a polarização da base do transistor, controlando sua região de operação. Com isso, é possível definir a tensão final entregue ao dispositivo a ser carregado, variando de forma segura entre 3V a 12V.
+   Um resistor variável, de valor típico 10 kΩ, que permite ajustar a tensão de saída do carregador. Atua diretamente sobre a polarização da base do transistor, controlando sua região de operação. Com isso, é possível definir a tensão final entregue ao dispositivo a ser carregado, variando de forma segura entre, aproximadamente, 3V a 12V.
 
 7. **LED (Diodo Emissor de Luz)**
 
@@ -130,11 +155,19 @@ O circuito foi desenvolvido no simulador **Falstad** para testar dinamicamente o
 
    Adicionado na simulação por conveniência visual, não interfere diretamente na funcionalidade elétrica do circuito. Serve como referência de potencial comum e facilita a organização esquemática no ambiente de simulação.
 
+10. **Escolhas de Projeto**
+    Durante o desenvolvimento do projeto, houve certas decisões as quais foram tomadas, a fim de se garantir a segurança do funcionamento correto do circuito, sendo elas:
+      - O uso de resistores de até 5 W de potência (no caso, os resistores de 100 Ω e de 120 Ω, presentes, respectivamente, antes do transistor NPN e no final do circuito, servindo como a "saída" do carregador);
+
+      - A inserção de um capacitor de 1mF, para garantir a integridade do circuito, em caso de algum pico de corrente do transformador, se a sua especificação variar;
+
+      - A presença de um diodo adicional ao lado do resistor de "saída" do circuito, servindo como proteção adicional meramente. A sua presença é facultativa, podendo ser retirado tranquilamente do circuito, caso se deseje.
+
 ## Componentes e Funções (explicação resumida)
 
 | Componente                        | Função                                               |
 | --------------------------------- | ---------------------------------------------------- |
-| Transformador rebaixador          | Reduz 127 V CA para 3–12 V CC e isola galvanicamente |
+| Transformador rebaixador          | Reduz 127 V CA para, aproximadamente, 3–12 V CC e isola galvanicamente |
 | Ponte retificadora (1N4007 × 4)   | Converte CA em CC pulsante (onda completa)           |
 | Capacitor eletrolítico (≥ 470 µF) | Suaviza ondulações, mantendo ripple abaixo de 10%    |
 | Transistor NPN (BC547 / 2N2222)   | Regula corrente e tensão de saída                    |
