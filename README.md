@@ -8,6 +8,30 @@
 
 ---
 
+## Índice
+
+1. [Integrantes do Grupo](#integrantes-do-grupo)
+2. [Objetivos do Projeto](#objetivos-do-projeto)
+3. [Descrição Geral do Circuito](#descrição-geral-do-circuito)
+   - [Topologia do circuito](#topologia-do-circuito)
+   - [Imagens do circuito](#imagens-do-circuito)
+   - [Links úteis](#links-úteis)
+4. [Explicação Técnica (Geral)](#explicação-técnica-geral)
+   - [Fonte de Corrente Alternada (CA) e Transformador](#1-fonte-de-corrente-alternada-ca-e-transformador)
+   - [Ponte Retificadora de Diodos](#2-ponte-retificadora-de-diodos-retificador-de-onda-completa)
+   - [Capacitor Eletrolítico de Filtro](#3-capacitor-eletrolítico-de-filtro-≥-470-µf)
+   - [Resistor de Carga](#4-resistor-de-carga)
+   - [Transistor NPN (BJT)](#5-transistor-npn-bjt)
+   - [Potenciômetro](#6-potenciômetro)
+   - [LED (Diodo Emissor de Luz)](#7-led-diodo-emissor-de-luz)
+   - [Diodo Zener (Regulador de Tensão)](#8-diodo-zener-regulador-de-tensão)
+   - [Terra (GND)](#9-terra-gnd)
+5. [Componentes e Funções (explicação resumida)](#componentes-e-funções-explicação-resumida)
+6. [Funcionamento Resumido](#funcionamento-resumido)
+7. [Lista de Materiais e Custos](#lista-de-materiais-e-custos)
+
+---
+
 ## Objetivos do Projeto
 
 Este trabalho tem como objetivo projetar, descrever e simular uma fonte retificadora ajustável que converta corrente alternada (CA) de 127 V (valor eficaz) e frequência de 60 Hz em corrente contínua (CC), com saída regulável na faixa de **3 a 12 V**. A fonte deve ser adequada para aplicações práticas, como o carregamento de celulares e pequenos dispositivos eletrônicos.
