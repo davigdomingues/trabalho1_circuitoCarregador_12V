@@ -67,7 +67,7 @@ O circuito foi desenvolvido no simulador **Falstad** para testar dinamicamente o
 
 **I) Falstad:**
 
-![Circuito carregador 12V Falstad](Imagens/Carregador/Circuito%20falstad.png)
+![Circuito carregador 12V Falstad](Imagens/Carregador//Falstad/Circuito%20falstad.png)
 
 **II) Circuito físico implementado:**
 
@@ -117,13 +117,17 @@ O circuito foi desenvolvido no simulador **Falstad** para testar dinamicamente o
 
    Nesse caso, o ‘secundário’ representa a saída, enquanto ‘primário’ representa a entrada. Tem-se a imagem a seguir das especificações dos transformadores presentes para o circuito:
    
+   ![Circuito carregador 12V Falstad](Imagens/Carregador//Falstad/Especificacoes%20transformadores.jpeg)
+
    Para este projeto, foi utilizado o transformador número 1. No Falstad, foi utilizada a seguinte configuração para o transformador:
 
-2. **Ponte Retificadora de Diodos (Retificador de Onda Completa)**
+   ![Circuito carregador 12V Falstad](Imagens/Carregador//Falstad/Espiras%20transformador.png)
+
+1. **Ponte Retificadora de Diodos (Retificador de Onda Completa)**
 
    A ponte retificadora é composta por quatro diodos de silício (ex.: 1N4007) dispostos em configuração clássica de onda completa. Essa topologia converte a corrente alternada do transformador em tensão contínua pulsante, mantendo a polaridade constante nos terminais de saída. Ambas as partes do ciclo da CA são aproveitadas, aumentando a eficiência e a continuidade do fluxo de carga. A tensão de saída ainda possui ondulações (ripple), que são suavizadas por um capacitor.
 
-3. **Capacitor Eletrolítico de Filtro (≥ 470 µF)**
+2. **Capacitor Eletrolítico de Filtro (≥ 470 µF)**
 
    Responsável pela filtragem da tensão pulsante gerada pela ponte de diodos, o capacitor atua como um banco de carga: armazena energia durante os picos de tensão e a libera nos vales, suavizando as oscilações. O valor mínimo, para esse projeto, que pode ser adotado é de 470 µF, o suficiente para manter o ripple abaixo de 10%, com base na expressão:
 
@@ -131,31 +135,31 @@ O circuito foi desenvolvido no simulador **Falstad** para testar dinamicamente o
    C >= I_carga / (2 * f * V_ripple)
    ```
 
-4. **Resistor de Carga**
+3. **Resistor de Carga**
 
    O resistor limita a corrente de saída e dissipa energia em forma de calor, protegendo os componentes sensíveis, como o LED e o transistor, contra sobrecorrentes. Além disso, auxilia no controle da velocidade de descarga do capacitor, estabilizando a resposta do circuito frente a variações rápidas de carga.
 
-5. **Transistor NPN (BJT)**
+4. **Transistor NPN (BJT)**
 
    O transistor NPN (ex.: BC547 ou 2N2222) funciona como chave de controle ou amplificador de corrente. A condução ocorre quando a base recebe tensão suficiente (tipicamente ≥ 0.7 V), permitindo a passagem de corrente do coletor ao emissor. No circuito, o transistor colabora com o controle de tensão de saída, regulando o fornecimento de energia ao LED e à carga em conjunto com o potenciômetro.
 
-6. **Potenciômetro**
+5. **Potenciômetro**
 
    Um resistor variável, de valor típico 10 kΩ, que permite ajustar a tensão de saída do carregador. Atua diretamente sobre a polarização da base do transistor, controlando sua região de operação. Com isso, é possível definir a tensão final entregue ao dispositivo a ser carregado, variando de forma segura entre, aproximadamente, 3V a 12V.
 
-7. **LED (Diodo Emissor de Luz)**
+6. **LED (Diodo Emissor de Luz)**
 
    O LED serve como indicador visual de funcionamento do circuito. Quando há condução de corrente suficiente, o LED acende, indicando que o circuito está operando corretamente e fornecendo tensão à carga. Sua intensidade luminosa depende da corrente que o atravessa.
 
-8. **Diodo Zener (Regulador de Tensão)**
+7. **Diodo Zener (Regulador de Tensão)**
 
    O diodo Zener (12 V / 1 W) é responsável por limitar a tensão máxima do circuito. Ele entra em condução quando a tensão atinge seu valor de ruptura em polarização reversa, impedindo que ultrapasse 12 V, protegendo assim os demais componentes e o dispositivo carregado. Atua como regulador passivo de tensão.
 
-9. **Terra (GND)**
+8. **Terra (GND)**
 
    Adicionado na simulação por conveniência visual, não interfere diretamente na funcionalidade elétrica do circuito. Serve como referência de potencial comum e facilita a organização esquemática no ambiente de simulação.
 
-10. **Escolhas de Projeto**
+9. **Escolhas de Projeto**
     Durante o desenvolvimento do projeto, houve certas decisões as quais foram tomadas, a fim de se garantir a segurança do funcionamento correto do circuito, sendo elas:
       - O uso de resistores de até 5 W de potência (no caso, os resistores de 100 Ω e de 120 Ω, presentes, respectivamente, antes do transistor NPN e no final do circuito, servindo como a "saída" do carregador);
 
