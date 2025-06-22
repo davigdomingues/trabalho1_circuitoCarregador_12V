@@ -99,6 +99,7 @@ O circuito foi desenvolvido no simulador **Falstad** para testar dinamicamente o
 
 * Simulação interativa no Falstad: [https://tinyurl.com/27o6eqhh](https://tinyurl.com/27o6eqhh)
 * Vídeo de execução do circuito: [https://youtu.be/P82pu6Qgv4M](https://youtu.be/P82pu6Qgv4M)
+* Vídeo explicativo do circuito: [https://youtu.be/YhmCq-Fb2Ps](https://youtu.be/YhmCq-Fb2Ps)
 
 ---
 
