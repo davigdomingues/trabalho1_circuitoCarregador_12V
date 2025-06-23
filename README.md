@@ -13,13 +13,12 @@
 
 ## Índice
 
-1. [Integrantes do Grupo](#integrantes-do-grupo)
-2. [Objetivos do Projeto](#objetivos-do-projeto)
-3. [Descrição Geral do Circuito](#descrição-geral-do-circuito)
+1. [Objetivos do Projeto](#objetivos-do-projeto)
+2. [Descrição Geral do Circuito](#descrição-geral-do-circuito)
    - [Topologia do circuito](#topologia-do-circuito)
    - [Imagens do circuito](#imagens-do-circuito)
    - [Links úteis](#links-úteis)
-4. [Explicação Técnica (Geral)](#explicação-técnica-geral)
+3. [Explicação Técnica (Geral)](#explicação-técnica-geral)
    - [Fonte de Corrente Alternada (CA) e Transformador](#fonte-de-corrente-alternada-ca-e-transformador)
    - [Ponte Retificadora de Diodos](#ponte-retificadora-de-diodos-retificador-de-onda-completa)
    - [Capacitor Eletrolítico de Filtro](#capacitor-eletrolítico-de-filtro-≥-348.77-µf)
@@ -30,9 +29,9 @@
    - [Diodo Zener (Regulador de Tensão)](#diodo-zener-regulador-de-tensão)
    - [Terra (GND)](#terra-gnd)
    - [Escolhas de Projeto](#escolhas-de-projeto)
-5. [Componentes e Funções (explicação resumida)](#componentes-e-funções-explicação-resumida)
-6. [Funcionamento Resumido](#funcionamento-resumido)
-7. [Lista de Materiais e Custos](#lista-de-materiais-e-custos)
+4. [Componentes e Funções (explicação resumida)](#componentes-e-funções-explicação-resumida)
+5. [Funcionamento Resumido](#funcionamento-resumido)
+6. [Lista de Materiais e Custos](#lista-de-materiais-e-custos)
 
 ---
 
@@ -106,6 +105,8 @@ O circuito foi desenvolvido no simulador **Falstad** para testar dinamicamente o
 ## Cálculo de valores pertinentes
 
 ### Contas do Circuito
+
+Caso haja algum problema para visualização das equações/relações, aqui está o documento contendo todas as devidas operações [CálculosProjeto1.pdf](./Cálculos%20Projeto%201.pdf)
 
 ### 1. Parâmetros Iniciais e Tensão de Pico
 
