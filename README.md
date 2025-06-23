@@ -105,7 +105,68 @@ O circuito foi desenvolvido no simulador **Falstad** para testar dinamicamente o
 
 ## Cálculo de valores pertinentes
 
-![Cálculos Trabalho 1](./calculos_trabalho1.png)
+### Contas do Circuito
+
+### 1. Parâmetros Iniciais e Tensão de Pico
+
+O cálculo parte da tensão RMS do secundário do transformador.
+
+* **Tensão Eficaz (Padrão do Projeto):**
+
+    $V_{eficaz} = V_{rms} = 127V$
+
+* **Tensão de Pico da Fonte (antes da retificação):**
+
+    Corresponde à tensão de pico no secundário do transformador.
+    $$V_{pico(fonte)} = V_{rms} \cdot \sqrt{2} \approx 179,6V$$
+
+    > É associada à integral da senóide dos dados de funcionamento do transformador.
+
+* **Tensão de Pico do Circuito (pós-retificação):**
+
+   $V_{\text{pico(circuito)}} = V_{\text{pico(fonte)}} \cdot \frac{N_2}{N_1} - 2 \cdot 0.7$ $\cong 179,6 \cdot 0,143 -1,4$
+
+   > $\frac{N1}{N2} =$ Razão inversa de espiras do transformador $=\frac{1}{7}$
+   
+   > $0.7 =$ Consumo de cada diodo ligado ao transformador
+
+   $\therefore \space V_{\text{pico(circuito)}} \approx 24,28V$
+   
+   
+   > *Observação: Os cálculos subsequentes são baseados neste valor de $V_{pico(circuito)}$.*
+
+
+### 2. Ripple e Tensão Média
+
+O objetivo é manter uma ondulação (ripple) de tensão em 10%.
+
+* **Tensão de Ripple ($V_{ripple}$):**
+
+    $$V_{ripple} = V_{pico(circuito)} \cdot 0,1 = 24.28V \cdot 0,1 \approx 24,28V$$
+
+* **Tensão Mínima do Circuito ($V_{min}$):**
+
+    $$V_{min(circuito)} = V_{pico(circuito)} - V_{ripple} = 24.28V - 2.428V \approx 21,852V$$
+
+* **Tensão Média do Circuito ($V_{média}$):**
+
+    $$V_{média(circuito)} = \frac{V_{pico(circuito)} + V_{min(circuito)}}{2} = \frac{24.28V + 21.852V}{2} \approx 23,066V$$
+
+### 3. Cálculo do Capacitor de Filtro
+
+A capacitância necessária é calculada com base na corrente da carga, na frequência da rede e na tensão de ripple desejada.
+
+* **Corrente de Carga (Aproximada):**
+
+    $$I_{carga} \approx 101.867mA$$
+
+* **Capacitância ($C$):**
+
+    A fórmula utiliza a frequência do sinal retificado, que é o dobro da frequência da rede para um retificador de onda completa (2 * 60Hz = 120Hz).
+
+    $$C = \frac{I_{aproximada}}{f_{transformador} \cdot V_{ripple}} \approx \frac{0.101867A}{120Hz \cdot 2.428V} \approx 348.77 \mu F$$
+
+    $$C \approx 348.77 \mu F$$, Indica a menor capacitância para o circuito
 
 ## Explicação Técnica (Geral)
 
@@ -124,10 +185,32 @@ O circuito foi desenvolvido no simulador **Falstad** para testar dinamicamente o
    ```
 
    Nesse caso, o ‘secundário’ representa a saída, enquanto ‘primário’ representa a entrada. Tem-se a imagem a seguir das especificações dos transformadores presentes para o circuito:
+
+   | Transformador (N°) | Cor Tomada | Voltagem AC | Voltagem no capacitor
+   | ---------------------- | ---------------------- | ---------------------- | ----------------------
+   | 1      | Preto e Vermelho   | 18.1V | 24.2V  |
+   | 2      | Preto e Vermelho   | 18.1V | 24.2V  |
+   | 3      | Amarelo - Laranja  | 16.3V | 22V    |
+   | 4      | Preto e Vermelho   | 18.1V | 24.2V  |
+   | 5      | -                  | 18.1V | 24.2V  |
+   | 6      | Preto - Branco     | 11V   | 14.2V  |
+   | Alek   | -                  | 12.1V | 14V    |
+
+
    
    ![Circuito carregador 12V Falstad](Imagens/Carregador//Falstad/Especificacoes%20transformadores.jpeg)
 
    Para este projeto, foi utilizado o transformador número 1. No Falstad, foi utilizada a seguinte configuração para o transformador:
+
+   | Configuração                        | Valor                                               |
+   | --------------------------------- | ---------------------------------------------------- |
+   | Indutância Primária (H)           | 4 |
+   | Razão (N1/N2)                     | 7 |
+   | Coeficiente de acoplamento        | 0.999 |
+   | Aproximação Trapezoidal           | Marcado |
+   | Permutar Polaridade Secundária    | Desmarcado |
+
+
 
    ![Circuito carregador 12V Falstad](Imagens/Carregador//Falstad/Espiras%20transformador.png)
 
