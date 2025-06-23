@@ -172,19 +172,9 @@ A capacitância necessária é calculada com base na corrente da carga, na frequ
 
 1. **Fonte de Corrente Alternada (CA) e Transformador**
 
-   A entrada do circuito consiste em uma fonte senoidal padrão da rede elétrica brasileira, com tensão eficaz de 127 V e frequência de 60 Hz. A tensão de pico é dada por:
+   A entrada do circuito consiste em uma fonte senoidal padrão da rede elétrica brasileira, com tensão eficaz de 127 V e frequência de 60 Hz.
 
-   ```
-   V_pico = V_rms * sqrt(2)
-   ```
-
-   Essa fonte está conectada a um transformador rebaixador, que tem a função de reduzir a tensão para valores apropriados ao carregamento (entre, aproximadamente, 3V e 12V, ajustáveis). O transformador também realiza o isolamento galvânico entre a rede elétrica e o circuito de carga, garantindo maior segurança. A relação de espiras (N₁\:N₂) determina o valor da tensão de saída no enrolamento secundário, de acordo com:
-
-   ```
-   N1/N2 = V1/V2
-   ```
-
-   Nesse caso, o ‘secundário’ representa a saída, enquanto ‘primário’ representa a entrada. Tem-se a imagem a seguir das especificações dos transformadores presentes para o circuito:
+   Essa fonte está conectada a um transformador rebaixador, que tem a função de reduzir a tensão para valores apropriados ao carregamento (entre, aproximadamente, 3V e 12V, ajustáveis). O transformador também realiza o isolamento galvânico entre a rede elétrica e o circuito de carga, garantindo maior segurança. A relação de espiras (N₁\:N₂) determina o valor da tensão de saída no enrolamento secundário, onde o ‘secundário’ representa a saída, enquanto ‘primário’ representa a entrada. Tem-se a imagem a seguir das especificações dos transformadores presentes para o circuito:
 
    | Transformador (N°) | Cor Tomada | Voltagem AC | Voltagem no capacitor
    | ---------------------- | ---------------------- | ---------------------- | ----------------------
@@ -196,10 +186,6 @@ A capacitância necessária é calculada com base na corrente da carga, na frequ
    | 6      | Preto - Branco     | 11V   | 14.2V  |
    | Alek   | -                  | 12.1V | 14V    |
 
-
-   
-   ![Circuito carregador 12V Falstad](Imagens/Carregador//Falstad/Especificacoes%20transformadores.jpeg)
-
    Para este projeto, foi utilizado o transformador número 1. No Falstad, foi utilizada a seguinte configuração para o transformador:
 
    | Configuração                        | Valor                                               |
@@ -210,21 +196,13 @@ A capacitância necessária é calculada com base na corrente da carga, na frequ
    | Aproximação Trapezoidal           | Marcado |
    | Permutar Polaridade Secundária    | Desmarcado |
 
-
-
-   ![Circuito carregador 12V Falstad](Imagens/Carregador//Falstad/Espiras%20transformador.png)
-
 1. **Ponte Retificadora de Diodos (Retificador de Onda Completa)**
 
    A ponte retificadora é composta por quatro diodos de silício (ex.: 1N4007) dispostos em configuração clássica de onda completa. Essa topologia converte a corrente alternada do transformador em tensão contínua pulsante, mantendo a polaridade constante nos terminais de saída. Ambas as partes do ciclo da CA são aproveitadas, aumentando a eficiência e a continuidade do fluxo de carga. A tensão de saída ainda possui ondulações (ripple), que são suavizadas por um capacitor.
 
 2. **Capacitor Eletrolítico de Filtro (≥ 348.77 µF)**
 
-   Responsável pela filtragem da tensão pulsante gerada pela ponte de diodos, o capacitor atua como um banco de carga: armazena energia durante os picos de tensão e a libera nos vales, suavizando as oscilações. O valor mínimo, para esse projeto, que pode ser adotado é de 348.77 µF, o suficiente para manter o ripple por volta de 10%, com base na expressão:
-
-   ```
-   C >= I_carga / (2 * f * V_ripple)
-   ```
+   Responsável pela filtragem da tensão pulsante gerada pela ponte de diodos, o capacitor atua como um banco de carga: armazena energia durante os picos de tensão e a libera nos vales, suavizando as oscilações. O valor mínimo, para esse projeto, que pode ser adotado é de 348.77 µF, o suficiente para manter o ripple por volta de 10%.
 
 3. **Resistor de Carga**
 
