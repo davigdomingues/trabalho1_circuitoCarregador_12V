@@ -235,7 +235,7 @@ A capacitância necessária é calculada com base na corrente da carga, na frequ
 
       - A inserção de um capacitor de 1mF, para garantir a integridade do circuito, em caso de algum pico de corrente do transformador, se a sua especificação variar;
 
-      - A presença de um diodo adicional ao lado do resistor de "saída" do circuito, servindo como proteção adicional meramente. A sua presença é facultativa, podendo ser retirado tranquilamente do circuito, caso se deseje.
+      - A presença de um diodo adicional ao lado do resistor de "saída" do circuito, servindo como proteção adicional meramente. A sua presença se dá como forma de prevenir o curto-circuito do modelo físico, já que garante o isolamento da corrente de carga da conexão de saída, se for por uma bobina eletromagnética, como o relé, após a desconexão do transformador na entrada do circuito. Para os fins descritos neste projeto, o diodo é facultativo, podendo ser retirado tranquilamente do circuito, caso se deseje.
 
 ## Componentes e Funções (explicação resumida)
 
