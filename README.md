@@ -279,5 +279,8 @@ A capacitância necessária é calculada com base na corrente da carga, na frequ
 | 102269 | Resistor 2,2 kΩ                            |    2 |              0,07 |              0,14 |
 | 102043 | Resistor 1 kΩ                              |    2 |              0,07 |              0,14 |
 | 102281 | Resistor 470 Ω                             |    2 |              0,07 |              0,14 |
-| 103464 | Resistor 100 Ω                             |    2 |              0,07 |              0,14 |
-|        | **Total Geral**                            |      |                   |         **43,20** |
+| 102899 | Resistor 100 Ω (5W)                        |    1 |              1,90 |              1,90 |
+| 110424 | Resistor 120 Ω (5W)                        |    1 |              1,90 |              1,90 |
+|        | **Total Geral**                            |      |                   |         **46,86** |
+
+Loja de compra: https://g.co/kgs/8GVWZd6
